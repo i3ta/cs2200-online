@@ -16,6 +16,8 @@ services:
     volumes:
       - ./backend/:/usr/src/app
       - backend_node_modules:/usr/src/app/node_modules
+    depends_on:
+      - mariadb
 
   frontend:
     build: ./frontend/
@@ -26,6 +28,8 @@ services:
       - 5173:5173
     extra_hosts:
       - "localhost:host-gateway"
+    depends_on:
+      - backend
 
 volumes:
   backend_node_modules:
