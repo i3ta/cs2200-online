@@ -1,0 +1,32 @@
+services:
+  mariadb:
+    image: mariadb:10.6.23
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      - MARIADB_ROOT_PASSWORD=verysecretpassword
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
+  backend:
+    build: ./backend/
+    ports:
+      - 4000:4000
+    volumes:
+      - ./backend/:/usr/src/app
+      - backend_node_modules:/usr/src/app/node_modules
+
+  frontend:
+    build: ./frontend/
+    volumes:
+      - ./frontend/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 5173:5173
+    extra_hosts:
+      - "localhost:host-gateway"
+
+volumes:
+  backend_node_modules:
+  mariadb_data:
