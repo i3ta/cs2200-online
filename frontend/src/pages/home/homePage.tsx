@@ -20,13 +20,13 @@ export const HomePage = () => {
         <div className="col-span-1 w-full lg:min-h-screen flex flex-col items-start justify-center z-10">
           <Text size="h1">Welcome to</Text>
           <Text size="t1" className="text-[96px]">
-            CS2200
+            CS_2200
           </Text>
           <Text size="h1">Systems and Networks</Text>
         </div>
-        <div className="pt-32 flex flex-col gap-4">
+        <div className="lg:min-h-screen flex flex-col gap-4 justify-center">
           <Text size="h3" className="font-bold">
-            Welcome to CS2200: Introduction to Systems and Networking!
+            Welcome to CS2200: Systems and Networking!
           </Text>
           <Text>
             In this course, you’ll get a behind-the-scenes look at how computers

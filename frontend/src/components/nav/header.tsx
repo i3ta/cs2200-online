@@ -15,7 +15,7 @@ export const Header = () => {
       >
         <Link to="/">
           <Text size="h3" className="text-white font-bold cursor-pointer gap-8">
-            CS2200
+            CS_2200
           </Text>
         </Link>
         <div className="h-full flex flex-row gap-8 items-center">
@@ -24,11 +24,11 @@ export const Header = () => {
           {/*     Vistool */}
           {/*   </Text> */}
           {/* </Link> */}
-          <Link to="/">
-            <Text className="text-white cursor-pointer gap-4 hover:opacity-50 transition-all">
-              Office Hours
-            </Text>
-          </Link>
+          {/* <Link to="/"> */}
+          {/*   <Text className="text-white cursor-pointer gap-4 hover:opacity-50 transition-all"> */}
+          {/*     Office Hours */}
+          {/*   </Text> */}
+          {/* </Link> */}
           <Link to="/">
             <Text className="text-white cursor-pointer gap-4 hover:opacity-50 transition-all">
               Demos
